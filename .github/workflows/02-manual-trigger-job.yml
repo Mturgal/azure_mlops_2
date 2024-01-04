@@ -16,6 +16,6 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: submit azure ml job
-      run: az ml job create src/job.yml --resource-group learn_mlops --workspace mlops_2_dev
+      run: az ml job create -f src/job.yml --resource-group learn_mlops --workspace mlops_2_dev
 
 
